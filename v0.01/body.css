@@ -1,0 +1,13 @@
+body{
+    background: rgb(231, 13, 68);
+    background: linear-gradient(90deg, 
+    rgb(182, 11, 11)  0%, 
+    rgb(229, 255, 0) 100%);
+
+
+}
+
+div, b, table, h5 {
+    color:rgb(117, 41, 41);
+}
+

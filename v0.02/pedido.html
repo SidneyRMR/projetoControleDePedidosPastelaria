@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+
+    <link rel="stylesheet" href="body.css">
+    <link rel="javascript" href="backend.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+</head>
+
+<body>
+    <div>    
+        <h4 align="center">Tela de Pedido</h4>
+        <div align="center">
+            <label for="nomeCliente">Nome do Cliente</label>
+            <input type="text" 
+                   id="nomeCliente"
+                   placeholder="Digite o nome do cliente"
+                   style="width: 200px;">
+        </div>
+    </div>
+    <!--Formulário padrão -  -->
+        <table width="100%">
+            <thead align="center">
+                <th>Sabor</th>
+                <th>Borda</th>
+                <th>Adicional</th>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>
+                        <select id="sabor">
+                            <option selected value="carne">Carne</option>
+                            <option  value="frango">Frango</option>
+                            <option  value="mussarela">Mussarela</option>
+                            <option  value="pizza">Pizza</option>
+                            <option  value="calabresa">Calabresa</option>
+                            <option  value="palmito">Palmito</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="borda">
+                            <option selected value="nenhuma">Nenhuma</option>
+                            <option  value="cheddar">Cheddar</option>
+                            <option  value="requeijao">Requeijão</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="adicional">
+                            <option selected value="nenhum">Nenhum</option>
+                            <option  value="milho">Milho</option>
+                            <option  value="ervilha">Ervilha</option>
+                            <option  value="azeitona">Azeitona</option>
+                            <option  value="calabresa">Calabresa</option>
+                            <option  value="bacon">Bacon</option>
+                            <option  value="mussarela">Mussarela</option>
+                            <option  value="requeijao">Requeijão</option>
+                        </select>
+                    </td>
+                    <td><input type="button" value="Adicionar Pastel" onclick="adicionarPastel()"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <table align="center">
+            <tr>
+                <td>
+                    <input type="button" value="Finalizar Pedido" style="height: 50px;" onclick="pedido()">
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <p style="font-size: 20px;" id="newTable" ></p>
+        </ul>
+        
+
+        <script>
+            // const fs = require('fs')
+
+            function pedido(){
+                const pastel = new Object
+                pastel.sabor = document.getElementById('sabor').value
+                pastel.borda = document.getElementById('borda').value
+                pastel.adicional = document.getElementById('adicional').value
+
+
+
+                // fs.writeFile(__dirname + '/pedido.json', JSON.stringify(pastel), err =>{
+                    //alert( err || ('Pedido Enviado!'))
+                    alert(pastel.borda)
+                // })
+
+                // alert('js funcionando')
+            }
+
+
+            function adicionarPastel(){
+    alert('Ola2')
+}
+        </script>
+</body>
+
+<script>
+
+// function pedido(){
+//     alert('Ola')
+// }
+
+// function adicionarPastel(){
+//     alert('Ola2')
+// }
+    //const fs = require('fs')
+
+    // function pedido(){
+        // const pastel = new Object
+        // pastel.sabor = document.getElementById('sabor').value
+        // pastel.borda = document.getElementById('borda').value
+        // pastel.adicional = document.getElementById('adicional').value
+
+
+
+        // fs.writeFile(__dirname + '/pedido.json', JSON.stringify(pastel), err =>{
+        //     alert( err || ('Pedido Enviado!'))
+            // alert(pastel.sabor)
+        // })
+    // }
+
+    // function adicionarPastel(){
+
+                // let tbody = document.createElement("tbody");
+                // let tr = document.createElement("tr");
+                // let td = document.createElement("td");
+                // let select = document.createElement(`
+                // <select id="sabor">
+                //             <option selected value="carne">Carne</option>
+                //             <option  value="frango">Frango</option>
+                //             <option  value="mussarela">Mussarela</option>
+                //             <option  value="pizza">Pizza</option>
+                //             <option  value="calabresa">Calabresa</option>
+                //             <option  value="palmito">Palmito</option>
+                //         </select>`);
+                // select.innerText = 'teste';
+                // list.appendChild(li);
+    //             alert('Adicionar pastel')
+
+    // }
+
+
+
+
+</script>
+</html>
